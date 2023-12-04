@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.settings-top-nav {
+    background-color: white;
+    padding-inline: 1rem;
+    padding-block: .5rem;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+.settings-top-nav div:nth-child(1) {
+    display: flex;
+    gap: .5rem;
+    background-color: #c2f1fd;
+    width: fit-content;
+    padding: .25rem 1rem;
+    border-radius: 16px;
+    cursor: pointer;
+    color: #21999D;
+}

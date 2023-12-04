@@ -1,0 +1,76 @@
+<div class="user-form">
+    <h2>New User</h2>
+    <form (submit)="submitForm()">
+        <div>
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" [(ngModel)]="user.firstName" name="firstName" required>
+        </div>
+        <div>
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" [(ngModel)]="user.lastName" name="lastName" required>
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" [(ngModel)]="user.email" name="email" required>
+        </div>
+        <div>
+            <label for="mobileNumber">Mobile Number:</label>
+            <input type="tel" id="mobileNumber" [(ngModel)]="user.mobileNumber" name="mobileNumber" required>
+        </div>
+        <div>
+            <label for="employeeId">Employee ID:</label>
+            <input type="text" id="employeeId" [(ngModel)]="user.employeeId" name="employeeId" required>
+        </div>
+        <div>
+            <label for="username">Username:</label>
+            <input type="text" id="username" [(ngModel)]="user.username" name="username" required>
+        </div>
+        <div>
+            <label for="role">Role:</label>
+            <select id="role" [(ngModel)]="user.role" name="role" required>
+                <option value="admin">Super Admin</option>
+                <option value="user">Admin</option>
+            </select>
+        </div>
+        <div>
+            <label for="password">Password:</label>
+            <input type="password" id="password" [(ngModel)]="user.password" name="password" required>
+        </div>
+        <div>
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" id="confirmPassword" [(ngModel)]="confirmPassword" name="confirmPassword" required>
+        </div>
+        <button type="submit">Save</button>
+    </form>
+    <h2>Module Permission</h2>
+    <table class="table">
+        <thead class="thead-light">
+            <tr>
+                <th>User Type</th>
+                <th>READ</th>
+                <th>WRITE</th>
+                <th>DELETE</th>
+                <th>APPROVAL</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Super Admin</td>
+                <td><input type="checkbox" class="form-check-input" checked></td>
+                <td><input type="checkbox" class="form-check-input"></td>
+                <td><input type="checkbox" class="form-check-input"></td>
+                <td><input type="checkbox" class="form-check-input"></td>
+            </tr>
+            <tr>
+                <td>Admin</td>
+                <td><input type="checkbox" class="form-check-input" checked></td>
+                <td><input type="checkbox" class="form-check-input" checked></td>
+                <td><input type="checkbox" class="form-check-input" checked></td>
+                <td><input type="checkbox" class="form-check-input" checked></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</div>

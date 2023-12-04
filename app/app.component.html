@@ -1,0 +1,29 @@
+<!-- <div>
+  <h1>Reminder</h1>
+  <h3>{{ title }}</h3>
+  <ul>
+    <li *ngFor="let profile of profiles">
+      {{ profile.first_name }} {{ profile.last_name }}
+    </li>
+  </ul>
+
+  <input type="text" name="" id="" placeholder="" [(ngModel)]="name" />
+  <app-login [loginName]="''"></app-login>
+</div> -->
+<!-- ng g c main/dashboard -->
+<!-- ng g c user/eit -->
+<!-- ng g c user/staff -->
+<app-top-nav></app-top-nav>
+<div class="wrapper">
+  <app-side-nav></app-side-nav>
+  <!-- <div class="main-content-wrapper">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, officia
+    aliquam magni minima labore id illo consectetur commodi illum nesciunt
+    ducimus quaerat eaque, quasi beatae doloribus ullam cum. Esse reprehenderit
+    ipsa ratione voluptatibus sunt quasi eaque quia delectus ut! Ab beatae
+    architecto atque unde pariatur in error est eveniet voluptatem.
+  </div> -->
+  <div class="main-content-wrapper">
+    <router-outlet></router-outlet>
+  </div>
+</div>

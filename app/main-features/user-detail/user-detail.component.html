@@ -1,0 +1,84 @@
+
+<div class="container">
+    <div class="nav-bar">
+        <span class="setting-btn">
+            <i class = "fa fa-cog"></i>
+            Settings
+        </span>
+    </div>
+    <div class="main-part">
+        <div class="user-menu">
+            <small class="menu-profile">Profile</small>
+            <small class="menu-users">Users</small>
+        </div>
+        <div class="boxes">
+            <div class="top-box">
+                <div class="box1 item">
+                    <div class="heading-user">
+                        <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" class="user-image" alt="img" >
+                        <div class="desc-user">
+                            <h4>Ezechiel Kitwana</h4>
+                            <small>Director, MEST Africa</small>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                    <div class="notification-user">
+                            <div class = "notif-det">
+                                <div class = "icon">
+                                    <i class = "fa fa-bell-o"></i>
+                                    <p>Notifications</p>
+                                </div>
+                                <span>{{userId}}6</span>
+                            </div>
+                            <div class = "notif-det">
+                                <div class = "icon">
+                                    <i class = "fa fa-comment-o"></i>
+                                    <p>Messages</p>
+                                </div>
+                                <span>08</span>
+                            </div>
+                    </div>
+                </div>    
+                <div class="box2 item">
+                    <h3>Bio Data</h3>
+                    <div class = "form">
+                        <input type = "text" placeholder="First name" class = "input" />
+                        <input type = "text" placeholder="Last name" class = "input" />
+                        <div class="box-input">
+                            <select id = "selection" name = "description">
+                                <option value = "">Select Gender</option>
+                                <option value = "M">Male</option>
+                                <option value = "F">Female</option>
+                            </select>
+                            <input type="date" id="myDate" name="selectedDate" placeholder="Select Date">
+                        </div>
+                        <input type = "text" placeholder="City" class = "input" />
+                        <input type = "text" placeholder="Adress" class = "input" />
+                    </div>
+                    <div class ="buttons">
+                        <button class ="btn1">Update</button>
+                        <button class ="btn2">Cancel</button>
+                    </div>
+                </div>  
+            <div>
+        </div>
+        <div class="bottom-box">
+            <div class = "form">
+                <h3>Account Data</h3>
+                <div class="da">
+                    <input type = "email" placeholder="kitwana.ezechie@meltwater.org" class = "input input2" />
+                    <input type = "email" placeholder="email@example.com" class = "input input2" />
+                </div>
+                <h3>Change Password</h3>
+                <input type = "text" placeholder="Current Password" class = "input" />
+                <input type = "text" placeholder="New Password" class = "input" />
+                <input type = "text" placeholder="Confirm new Password" class = "input" />
+            </div>
+            <div class ="buttons">
+                <button class ="btn1">Update</button>
+                <button class ="btn2">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+

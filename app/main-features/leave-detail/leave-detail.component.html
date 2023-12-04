@@ -1,0 +1,18 @@
+<div class="details-container">
+    <div></div>
+        <a class="return-button" [routerLink]="['/leave',]">Return to Leaves</a>
+        <div class="details-section">
+            <h4>Hello {{leave?.created_by}}</h4>
+          <!-- Add your details content here -->
+          <div class="details-content">
+            <p>{{leave?.leave_details}}</p>
+            <!-- Your details content goes here -->
+          </div>
+        </div>
+      
+        <div class="action-buttons">
+          <a class="accept-button" [routerLink]="['/leaves', leave?.id, leave?.created_by]">Accept Leave</a>
+          <a class="decline-button" [routerLink]="['/leaves', leave?.id, leave?.created_by]">Decline a Leave</a>
+        </div>
+      </div>
+      

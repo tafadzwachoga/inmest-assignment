@@ -1,0 +1,74 @@
+<div class="container">
+  <div class="header">Heading</div>
+  <div class="row">
+    <div class="col-md-4">
+      <img src="" alt="avatar image">
+    </div>
+    <div class="col-md-8">
+      <ul class="att">
+        <li>Role <span>{{attendanceInner?.role}}</span></li>
+        <li>Skills  <span>{{attendanceInner?.skills}}</span></li>
+        <li>EIT ID  <span>{{attendanceInner?.eit_id}}</span></li>
+        <li>Status  <span>{{attendanceInner?.status}}</span></li>
+        <li>Milestone  <span>{{attendanceInner?.milestone}}</span></li>
+      </ul>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <h1>Attendance Details</h1>
+    <div class="col-md-12">
+      <ul class="att">
+        <li>Number of Days <span>{{attendanceInner?.number_of_working_days}}</span></li>
+        <li>Number of Times Mest in <span>{{attendanceInner?.number_of_times_mest_in}}</span></li>
+        <li>Most Missed Class <span>{{attendanceInner?.most_missed_classes}}</span></li>
+        <li>Time Reporting <span>{{attendanceInner?.reporting_time}}</span></li>
+        <li>Absence <span>{{attendanceInner?.absense}}</span></li>
+        <li>Punctuality <span>{{attendanceInner?.punctuality}}</span></li>
+        <li>Request <span>{{attendanceInner?.requests}}</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <h1>Absence Analytics</h1>
+  <img src="" alt="Analytics image">
+</div>
+
+
+
+<style>
+
+  .row1 {
+    width: 100%;
+    display: flex;
+  }
+
+  .img-div {
+    width: 200px;
+    height: 200px;
+    border: 1px solid;
+  }
+
+  .att {
+    padding-right: 30%;
+  }
+  .att > li {
+    /* width: 100%; */
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 60px 5px 30px;
+  }
+  .attt > li {
+    /* width: 100%; */
+    display: flex;
+    gap: 50px;
+  }
+
+  .attt li p {
+    width: 100px;
+  }
+  .bg-li {
+    background-color: rgba(132, 193, 209, 0.63);
+  }
+ </style>

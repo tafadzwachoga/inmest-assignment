@@ -1,0 +1,58 @@
+.analytics{
+    display: flex;
+    flex: 1;
+    width: 100% !important;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.analytics .analyticsCard{
+    padding: 40px;
+    background-color:  rgb(240, 240, 240);
+    width: 100%;
+    margin: 20px;
+    display: flex;
+    border-radius: 6px;  
+
+}
+
+.analytics .analyticsCard h2{
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.analytics .analyticsCard i {
+    font-size: 32px;
+    margin-right: 20px;
+}
+
+.sectionTable{
+    padding: 40px;
+}
+
+.sectionChart{
+    padding: 20px;
+}
+
+table{
+    width: 100%;
+    text-align: left;
+}
+
+th {
+    background-color: #ffffff; /* light grey */
+    color: #333; /* dark grey */
+    font-weight: bold;
+    text-align: left;
+    padding: 10px;
+   }
+
+tr:nth-child(even) {
+    background-color: #f2f2f2; /* light grey */
+}
+
+td{
+    padding: 20px;
+    text-align: left;
+
+}

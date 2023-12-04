@@ -1,0 +1,166 @@
+<div class="req-body">
+    <br>
+  <div class="body-head">
+    <!-- <h3>Requests</h3> -->
+    <button class="xhead" mat-fab extended color="link" >
+    <i class="fa fa-bed"></i>
+    Requests
+    </button>
+    <div class="righties">
+      <button mat-fab extended>
+        <mat-icon>search</mat-icon>
+        Filter
+      </button>
+      <button mat-fab extended color>
+        <span>Today</span>
+        <mat-icon>expand_more</mat-icon>
+      </button>
+    </div>
+  </div>
+  <div class="requests-wrapper">
+  
+      <mat-tab-group dynamicHeight animationDuration="0ms">
+          <mat-tab label="Requests">
+  
+  
+            <mat-card>
+              <mat-card-content>
+            <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  
+  
+              <ng-container matColumnDef="id">
+                <th mat-header-cell *matHeaderCellDef> No. </th>
+                <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+              </ng-container>
+  
+              <ng-container matColumnDef="EIT_id">
+                <th mat-header-cell *matHeaderCellDef> EIT ID </th>
+                <td mat-cell *matCellDef="let element">
+                  <a [routerLink]="['/leave', element.id]" style="color: black;">{{element.EIT_id}} </a>
+                </td>
+              </ng-container>
+  
+              <ng-container matColumnDef="type">
+                <th mat-header-cell *matHeaderCellDef> Type </th>
+                <td mat-cell *matCellDef="let element">
+                <button mat-fab extended class={{element?.type}}>
+                {{ element.type }}
+                </button>
+                </td>
+              </ng-container>
+  
+              <ng-container matColumnDef="date">
+                <th mat-header-cell *matHeaderCellDef> Date </th>
+                <td mat-cell *matCellDef="let element"> {{element.date}} </td>
+              </ng-container>
+  
+              <ng-container matColumnDef="status">
+                <th mat-header-cell *matHeaderCellDef> Status </th>
+                <td mat-cell *matCellDef="let element" class="button"> 
+                          
+  
+                @if (element?.status=='Accepted') {
+                            <button mat-fab extended color="link" class={{element?.status}}>
+                              <mat-icon>check</mat-icon>
+                              {{element?.status}}
+                            </button>
+                            
+                }
+                
+                @if(element?.status=="Declined"){
+                            <button mat-fab extended color="warn" class={{element?.status}}>
+                              <mat-icon>close</mat-icon>
+                              {{element?.status}}
+                            </button>
+                }
+                
+                @if(element?.status=="Pending "){
+                            <button mat-fab extended color="" class={{element?.status}}>
+                              <mat-icon>chevron_right</mat-icon>
+                              {{element?.status}}
+                            </button>
+                
+                } 
+  
+                </td>
+              </ng-container>
+  
+              <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+              <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
+              </mat-card-content>
+            </mat-card>          
+          </mat-tab>
+          <mat-tab label="Total Requests">
+            <mat-card>
+                <mat-card-content>
+              <table mat-table [dataSource]="requestsTotal" class="mat-elevation-z8">
+    
+    
+                <ng-container matColumnDef="id">
+                  <th mat-header-cell *matHeaderCellDef> No. </th>
+                  <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+                </ng-container>
+    
+                <ng-container matColumnDef="EIT_id">
+                  <th mat-header-cell *matHeaderCellDef> EIT ID </th>
+                  <td mat-cell *matCellDef="let element">
+                    <a [routerLink]="['/leave', element.id]" style="color: black;">{{element.EIT_id}} </a>
+                  </td>
+                </ng-container>
+    
+                <ng-container matColumnDef="type">
+                  <th mat-header-cell *matHeaderCellDef> Type </th>
+                  <td mat-cell *matCellDef="let element">
+                  <button mat-fab extended class={{element?.type}}>
+                  {{ element.type }}
+                  </button>
+                  </td>
+                </ng-container>
+    
+                <ng-container matColumnDef="date">
+                  <th mat-header-cell *matHeaderCellDef> Date </th>
+                  <td mat-cell *matCellDef="let element"> {{element.date}} </td>
+                </ng-container>
+    
+                <ng-container matColumnDef="status">
+                  <th mat-header-cell *matHeaderCellDef> Status </th>
+                  <td mat-cell *matCellDef="let element" class="button"> 
+                            
+    
+                  @if (element?.status=='Accepted') {
+                              <button mat-fab extended color="link" class={{element?.status}}>
+                                <mat-icon>check</mat-icon>
+                                {{element?.status}}
+                              </button>
+                              
+                  }
+                  
+                  @if(element?.status=="Declined"){
+                              <button mat-fab extended color="warn" class={{element?.status}}>
+                                <mat-icon>close</mat-icon>
+                                {{element?.status}}
+                              </button>
+                  }
+                  
+                  @if(element?.status=="Pending "){
+                              <button mat-fab extended color="" class={{element?.status}}>
+                                <mat-icon>chevron_right</mat-icon>
+                                {{element?.status}}
+                              </button>
+                  
+                  } 
+    
+                  </td>
+                </ng-container>
+    
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+              </table>
+                </mat-card-content>
+              </mat-card>  
+          </mat-tab>
+      </mat-tab-group>
+  
+  </div>
+  </div>

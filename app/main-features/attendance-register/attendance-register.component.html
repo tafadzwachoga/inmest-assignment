@@ -1,0 +1,247 @@
+<div class="att-top">
+    <div>
+         ATTENDANCE REGISTER
+    </div>
+    <div class="second-div">
+        <p>Select Month</p>
+        <input type="date" name="" id="" value="12/23/2023">
+    </div>
+</div>
+<div class="att-top2">
+    <p>Show</p>
+    <select name="selections" id="selections">
+        <option value="10">10</option>
+        <option value="20">20</option>
+    </select>
+    <p>entries</p>
+</div>
+
+
+<table class="table">
+    <thead>
+        <th>Employee</th>
+        <th class="highlight">01</th>
+        <th>02</th>
+        <th>03</th>
+        <th>04</th>
+        <th>05</th>
+        <th>06</th>
+        <th class="highlight">07</th>
+        <th class="highlight">08</th>
+        <th>09</th>
+        <th>10</th>
+        <th>11</th>
+        <th>12</th>
+        <th>13</th>
+        <th class="highlight">14</th>
+        <th class="highlight">15</th>
+        <th>16</th>
+        <th>17</th>
+        <th>18</th>
+        <th>19</th>
+        <th>20</th>
+        <th class="highlight">21</th>
+        <th class="highlight">22</th>
+        <th>23</th>
+        <th>24</th>
+        
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of attendance;">
+        <td>{{item?.employeeName}}</td>
+        <td class="highlight">
+            <div class="present" *ngIf='item?.week1_status === "present"'>
+                <i class="fa fa-check"></i>
+            </div>
+            <div class="absent2" *ngIf='item?.week1_status === "absent"'>
+                <i class="fa fa-times"></i>
+            </div>
+        </td>
+        <td>
+            <div class="present" *ngIf='item?.week2_status === "present"'>
+                <i class="fa fa-check"></i>
+            </div>
+            <div class="absent" *ngIf='item?.week2_status === "absent"'>
+                <i class="fa fa-times"></i>
+            </div>    
+        </td>
+        <td>
+            <div class="present" *ngIf='item?.week3_status === "present"'>
+                <i class="fa fa-check"></i>
+            </div>
+            <div class="absent" *ngIf='item?.week3_status === "absent"'>
+                <i class="fa fa-times"></i>
+            </div>    
+        </td>
+        <td>
+            <div class="present" *ngIf='item?.week4_status === "present"'>
+                <i class="fa fa-check"></i>
+            </div>
+            <div class="absent" *ngIf='item?.week4_status === "absent"'>
+                <i class="fa fa-times"></i>
+            </div>    
+        </td>
+        <td>
+            <div class="present" *ngIf='item?.week5_status === "present"'>
+                <i class="fa fa-check"></i>
+            </div>
+            <div class="absent" *ngIf='item?.week5_status === "absent"'>
+                <i class="fa fa-times"></i>
+            </div>    
+        </td>
+        <td>
+            <div class="present" *ngIf='item?.week6_status === "present"'>
+                <i class="fa fa-check"></i>
+            </div>
+            <div class="absent" *ngIf='item?.week6_status === "absent"'>
+                <i class="fa fa-times"></i>
+            </div>    
+        </td>
+        <td class="highlight">
+            <div class="present" *ngIf='item?.week7_status === "present"'>
+                <i class="fa fa-check"></i>
+            </div>
+            <div class="absent2" *ngIf='item?.week7_status === "absent"'>
+                <i class="fa fa-times"></i>
+            </div>    
+        </td>
+        <td class="highlight">
+            <div class="present" *ngIf='item?.week8_status === "present"'>
+                <i class="fa fa-check"></i>
+            </div>
+            <div class="absent2" *ngIf='item?.week8_status === "absent"'>
+                <i class="fa fa-times"></i>
+            </div>    
+        </td>
+        <td>
+            <div class="present" *ngIf='item?.week9_status === "present"'>
+                <i class="fa fa-check"></i>
+            </div>
+            <div class="absent" *ngIf='item?.week9_status === "absent"'>
+                <i class="fa fa-times"></i>
+            </div>    
+        </td>
+        <td>
+            <div class="present" *ngIf='item?.week10_status === "present"'>
+                <i class="fa fa-check"></i>
+            </div>
+            <div class="absent" *ngIf='item?.week10_status === "absent"'>
+                <i class="fa fa-times"></i>
+            </div>    
+        </td>
+        <td>
+            <div class="present" *ngIf='item?.week11_status === "present"'>
+                <i class="fa fa-check"></i>
+            </div>
+            <div class="absent" *ngIf='item?.week11_status === "absent"'>
+                <i class="fa fa-times"></i>
+            </div>    
+        </td>
+        <td>
+            <div class="present" *ngIf='item?.week12_status === "present"'>
+                <i class="fa fa-check"></i>
+            </div>
+            <div class="absent" *ngIf='item?.week12_status === "absent"'>
+                <i class="fa fa-times"></i>
+            </div>    
+        </td>
+        <td>
+            <div class="present" *ngIf='item?.week13_status === "present"'>
+                <i class="fa fa-check"></i>
+            </div>
+            <div class="absent" *ngIf='item?.week13_status === "absent"'>
+                <i class="fa fa-times"></i>
+            </div>    
+        </td>
+        <td class="highlight">
+            <div class="present" *ngIf='item?.week14_status === "present"'>
+                <i class="fa fa-check"></i>
+            </div>
+            <div class="absent2" *ngIf='item?.week14_status === "absent"'>
+                <i class="fa fa-times"></i>
+            </div>    
+        </td>
+        <td class="highlight">
+            <div class="present" *ngIf='item?.week15_status === "present"'>
+                <i class="fa fa-check"></i>
+            </div>
+            <div class="absent2" *ngIf='item?.week15_status === "absent"'>
+                <i class="fa fa-times"></i>
+            </div>    
+        </td>
+        <td>
+            <div class="present" *ngIf='item?.week16_status === "present"'>
+                <i class="fa fa-check"></i>
+            </div>
+            <div class="absent" *ngIf='item?.week16_status === "absent"'>
+                <i class="fa fa-times"></i>
+            </div>    
+        </td>
+        <td>
+            <div class="present" *ngIf='item?.week17_status === "present"'>
+                <i class="fa fa-check"></i>
+            </div>
+            <div class="absent" *ngIf='item?.week17_status === "absent"'>
+                <i class="fa fa-times"></i>
+            </div>    
+        </td>
+        <td>
+            <div class="present" *ngIf='item?.week18_status === "present"'>
+                <i class="fa fa-check"></i>
+            </div>
+            <div class="absent" *ngIf='item?.week18_status === "absent"'>
+                <i class="fa fa-times"></i>
+            </div>    
+        </td>
+        <td>
+            <div class="present" *ngIf='item?.week19_status === "present"'>
+                <i class="fa fa-check"></i>
+            </div>
+            <div class="absent" *ngIf='item?.week19_status === "absent"'>
+                <i class="fa fa-times"></i>
+            </div>    
+        </td>
+        <td>
+            <div class="present" *ngIf='item?.week20_status === "present"'>
+                <i class="fa fa-check"></i>
+            </div>
+            <div class="absent" *ngIf='item?.week20_status === "absent"'>
+                <i class="fa fa-times"></i>
+            </div>    
+        </td>
+        <td class="highlight">
+            <div class="present" *ngIf='item?.week21_status === "present"'>
+                <i class="fa fa-check"></i>
+            </div>
+            <div class="absent2" *ngIf='item?.week21_status === "absent"'>
+                <i class="fa fa-times"></i>
+            </div>    
+        </td>
+        <td class="highlight">
+            <div class="present" *ngIf='item?.week22_status === "present"'>
+                <i class="fa fa-check"></i>
+            </div>
+            <div class="absent2" *ngIf='item?.week22_status === "absent"'>
+                <i class="fa fa-times"></i>
+            </div>    
+        </td>
+        <td>
+            <div class="present" *ngIf='item?.week23_status === "present"'>
+                <i class="fa fa-check"></i>
+            </div>
+            <div class="absent" *ngIf='item?.week23_status === "absent"'>
+                <i class="fa fa-times"></i>
+            </div>    
+        </td>
+        <td>
+            <div class="present" *ngIf='item?.week24_status === "present"'>
+                <i class="fa fa-check"></i>
+            </div>
+            <div class="absent" *ngIf='item?.week24_status === "absent"'>
+                <i class="fa fa-times"></i>
+            </div>    
+        </td>
+      </tr>
+    
+    </tbody>
+    </table>

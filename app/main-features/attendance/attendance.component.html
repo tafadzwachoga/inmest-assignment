@@ -1,0 +1,137 @@
+<!-- <div class="shadow" style="width: 100%; display:flex">
+    <div>
+        attendance
+    </div>
+    <div style="float: right;">
+        Today
+    </div>
+</div> -->
+<nav class="navbar navbar-expand-lg shadow" style="padding-bottom: 10px;">
+  <div class="container-fluid">
+    <p class="" href="#" style="border-radius: 40px;margin:0px;color:#21999D;background-color:rgba(33, 153, 157, 0.2);padding:5px 8px;"><i class="fa fa-desktop fa-xs" aria-hidden="true" style="padding: 5px;"></i>Attendance</p>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+      </ul>
+      <!-- <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+      </form> -->
+      <p style="padding-right: 20px;margin:0px;"><i class="fa fa-search" aria-hidden="true" style="padding-right: 5px;"></i>filter</p>
+      <p class=""  style="border-radius: 40px;margin:0px;color:#ffffff;background-color:rgba(33, 153, 157, 1);padding:3px 12px;"> Today </p>
+    </div>
+  </div>
+</nav>
+<table class="table shadow table-sm" style="margin:30px;width:95%;font-size: 0.82rem;">
+  <thead>
+    <tr>
+      <th scope="col">No</th>
+      <th scope="col">EIT ID</th>
+      <th scope="col">Reporting Time</th>
+      <th scope="col">Class</th>
+      <th scope="col">No Of Times</th>
+    </tr>
+  </thead>
+  <tbody class="align-middle">
+      <tr *ngFor="let item of attendance;" >
+          <td class="py-3 px-4">{{item.id}}</td>
+          <td class="py-3">
+          <a style="text-decoration: none;" [routerLink]="['/attendance-inner/1']">
+              
+             <button class="btn btn-link" style="display:flex;font-size: 0.82rem;border-radius: 40px;margin:0px;color:#000000;border: 0.5px solid rgba(0, 0, 0, 0.2);padding:5px 40px;width:fit-content;text-decoration: none;">
+              <div>
+                <img src="/assets/images/profile.jpg" alt="profile" style="width: 50px;height:50px;object-fit: cover;border-radius:50px;margin-left:-25px;margin-right:12px">
+              </div>
+              <div style="text-decoration: none;">
+                {{item.eit_id}}<br/>
+                <span>
+                    <i class="fa fa-circle" aria-hidden="true" style="color: #21999D;padding:2px;"></i>
+                    <i class="fa fa-circle" aria-hidden="true" style="color: #21999D;padding:2px;"></i>
+                    <i class="fa fa-circle" aria-hidden="true" style="color: #000000;padding:2px;"></i>
+                </span>
+                <span style="float: right;">2 minutes</span>
+              </div>
+
+              
+            </button> 
+          </a>
+
+          </td>
+          <td class="py-3">{{item.reporting_time}}</td>
+          <td class="py-3">
+              <p [ngStyle]="item.class ? {'background-color': '#21999D'} : {'background-color': 'rgba(157, 33, 33, 1)'}"
+              style="border-radius: 40px; margin: 0px; color: #ffffff; padding: 5px 40px; width: fit-content">
+              {{ item.class ? 'present' : 'absent' }}
+           </p>
+          </td>
+          <td class="py-3">{{item.number_of_times}}</td>
+      </tr>
+    <!-- <tr>
+      <th scope="row">01</th>
+      <td>
+         <p style="border-radius: 40px;margin:0px;color:#000000;background-color:rgba(33, 153, 157, 0.2);padding:5px 40px;width:fit-content">
+          name.surname#meltwater.org<br/>
+          <span>
+              <i class="fa fa-circle" aria-hidden="true" style="color: #21999D;padding:5px;"></i>
+              <i class="fa fa-circle" aria-hidden="true" style="color: #21999D;padding:5px;"></i>
+              <i class="fa fa-circle" aria-hidden="true" style="color: #000000;padding:5px;"></i>
+          </span>
+          <span style="float: right;">2 minutes</span>
+          
+      </p> 
+      </td>
+      <td>7:30am</td>
+      <td>
+          <p style="border-radius: 40px;margin:0px;color:#ffffff;background-color:rgba(157, 33, 33, 1);padding:5px 40px;width:fit-content">
+              absent
+          </p> 
+      </td>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">02</th>
+      <td>
+         <p style="border-radius: 40px;margin:0px;color:#000000;background-color:rgba(33, 153, 157, 0.2);padding:5px 40px;width:fit-content">
+          name.surname#meltwater.org<br/>
+          <span>
+              <i class="fa fa-circle" aria-hidden="true" style="color: #21999D;padding:5px;"></i>
+              <i class="fa fa-circle" aria-hidden="true" style="color: #21999D;padding:5px;"></i>
+              <i class="fa fa-circle" aria-hidden="true" style="color: #000000;padding:5px;"></i>
+          </span>
+          <span style="float: right;">2 minutes</span>
+          
+      </p> 
+      </td>
+      <td>7:30am</td>
+      <td>
+          <p style="border-radius: 40px;margin:0px;color:#ffffff;background-color:#21999D;padding:5px 40px;width:fit-content">
+              present
+          </p> 
+      </td>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">03</th>
+      <td>
+         <p style="border-radius: 40px;margin:0px;color:#000000;background-color:rgba(33, 153, 157, 0.2);padding:5px 40px;width:fit-content">
+          name.surname#meltwater.org<br/>
+          <span>
+              <i class="fa fa-circle" aria-hidden="true" style="color: #21999D;padding:5px;"></i>
+              <i class="fa fa-circle" aria-hidden="true" style="color: #21999D;padding:5px;"></i>
+              <i class="fa fa-circle" aria-hidden="true" style="color: #000000;padding:5px;"></i>
+          </span>
+          <span style="float: right;">2 minutes</span>
+          
+      </p> 
+      </td>
+      <td>7:30am</td>
+      <td>
+          <p style="border-radius: 40px;margin:0px;color:#ffffff;background-color:#21999D;padding:5px 40px;width:fit-content">
+              present
+          </p> 
+      </td>
+      </td>
+    </tr> -->
+
+  </tbody>
+</table>

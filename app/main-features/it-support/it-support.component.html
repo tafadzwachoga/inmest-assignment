@@ -1,0 +1,123 @@
+<div class="it-support-top">
+    <div class="route-element1">
+        <i class="fa fa-tv"></i>
+        <p>Dashboard > IT Support</p>
+    </div>
+    <div class="filter">
+        <div class="filter-search">
+            <i class="fa fa-search"></i>
+            <p>Filter</p>
+        </div>
+        <div class="filter-select">
+            <select name="time" id="time">
+                <option value="all-time">All Time</option>
+                <option value="this-week">This Week</option>
+            </select>
+        </div>
+    </div>
+</div>
+
+<div class="it-support-main-content">
+    <div class="card-container">
+        <mat-card class="example-card">
+            <div class="card-container2">
+                <h4>Overall</h4>
+                <div class="card-data">
+                    <div class="card-icon">
+                        <img src="../../../assets/images/icons/search icon.svg" alt="">
+                    </div>
+                    <h3>10</h3>
+                </div>
+            </div>
+        </mat-card>
+    
+        <mat-card class="example-card">
+            <div class="card-container2">
+                <h4>Overall</h4>
+                <div class="card-data">
+                    <div class="card-icon">
+                        <img src="../../../assets/images/icons/open icon.svg" alt="">
+                    </div>
+                    <h3>10</h3>
+                </div>
+            </div>
+        </mat-card>
+    
+        <mat-card class="example-card">
+            <div class="card-container2">
+                <h4>Overall</h4>
+                <div class="card-data">
+                    <div class="card-icon">
+                        <img src="../../../assets/images/icons/in progress icon.svg" alt="">
+                    </div>
+                    <h3>10</h3>
+                </div>
+            </div>
+        </mat-card>
+    
+        <mat-card class="example-card">
+            <div class="card-container2">
+                <h4>Overall</h4>
+                <div class="card-data">
+                    <div class="card-icon">
+                        <img src="../../../assets/images/icons/resolved icon.svg" alt="">
+                    </div>
+                    <h3>10</h3>
+                </div>
+            </div>
+        </mat-card>
+    
+    </div>
+    
+    <h4 class="incident-title">My Incidents</h4>
+    
+    
+    <table mat-table [dataSource]="incidents" class="mat-elevation-z1">
+    
+        <!--- Note that these columns can be defined in any order.
+              The actual rendered columns are set as a property on the row definition" -->
+    
+        <!-- Position Column -->
+        <ng-container matColumnDef="id">
+            <th mat-header-cell *matHeaderCellDef> # </th>
+            <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+        </ng-container>
+    
+        <!-- Name Column -->
+        <ng-container matColumnDef="eitID">
+            <th mat-header-cell *matHeaderCellDef> Eit ID </th>
+            <td mat-cell *matCellDef="let element">
+                <div>{{element.eitID}}</div>
+                <span>
+                    <small>Created</small>
+                    <small>{{element.createdAt}}</small>
+                </span>
+            </td>
+        </ng-container>
+    
+        <!-- Weight Column -->
+        <ng-container matColumnDef="state">
+            <th mat-header-cell *matHeaderCellDef> State </th>
+            <td mat-cell *matCellDef="let element"> <button class={{element.state}}> {{element.state}} </button> </td>
+        </ng-container>
+    
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="description">
+            <th mat-header-cell *matHeaderCellDef> Description </th>
+            <td mat-cell *matCellDef="let element"> <a href="#">{{element.description}}</a></td>
+        </ng-container>
+    
+        <ng-container matColumnDef="category">
+            <th mat-header-cell *matHeaderCellDef> Category </th>
+            <td mat-cell *matCellDef="let element" class={{element.category}}> {{element.category}} </td>
+        </ng-container>
+    
+        <ng-container matColumnDef="action">
+            <th mat-header-cell *matHeaderCellDef> Action </th>
+            <td mat-cell *matCellDef="let element"> {{element.action}} </td>
+        </ng-container>
+    
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+</div>

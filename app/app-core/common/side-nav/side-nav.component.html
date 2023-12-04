@@ -1,0 +1,84 @@
+<div class="side-nav">
+    <ul class="menu">
+      <li [routerLink]="['/']" [routerLinkActive]="'menu-active'" [routerLinkActiveOptions]="{ exact: true }">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+          style="fill: #00cbcb; margin-right: 10px" hover:fill="#fff">
+          <path
+            d="M4 13h6a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1zm-1 7a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-4a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v4zm10 0a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-7a1 1 0 0 0-1-1h-6a1 1 0 0 0-1 1v7zm1-10h6a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-6a1 1 0 0 0-1 1v5a1 1 0 0 0 1 1z">
+          </path>
+        </svg>
+        Dashboard
+      </li>
+      <li [routerLink]="['/attendance']" [routerLinkActive]="'menu-active'">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="
+            fill: #00cbcb;
+            margin-right: 10px;
+            border: 1px solid #00cbcb;
+            border-radius: 50%;
+            padding: 5px;
+          ">
+          <path
+            d="M20 3H4c-1.103 0-2 .897-2 2v11c0 1.103.897 2 2 2h7v2H8v2h8v-2h-3v-2h7c1.103 0 2-.897 2-2V5c0-1.103-.897-2-2-2zM4 14V5h16l.002 9H4z">
+          </path>
+        </svg>
+        Attendance
+      </li>
+      <li [routerLink]="['/analytics']" [routerLinkActive]="'menu-active'">
+        <!-- <img src="./inMEST/Group 1034.svg" alt="" class="sidemenu-icon" /> -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="
+            fill: #00cbcb;
+            margin-right: 10px;
+            border: 1px solid #00cbcb;
+            border-radius: 50%;
+            padding: 5px;
+          ">
+          <path
+            d="M20 7h-4V4c0-1.103-.897-2-2-2h-4c-1.103 0-2 .897-2 2v5H4c-1.103 0-2 .897-2 2v9a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1V9c0-1.103-.897-2-2-2zM4 11h4v8H4v-8zm6-1V4h4v15h-4v-9zm10 9h-4V9h4v10z">
+          </path>
+        </svg>
+        Analytics
+      </li>
+      <li [routerLink]="['/leave']" [routerLinkActive]="'menu-active'">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="
+            fill: #00cbcb;
+            margin-right: 10px;
+            border: 1px solid #00cbcb;
+            border-radius: 50%;
+            padding: 5px;
+          ">
+          <path
+            d="M16 2H8C4.691 2 2 4.691 2 8v12a1 1 0 0 0 1 1h13c3.309 0 6-2.691 6-6V8c0-3.309-2.691-6-6-6zm4 13c0 2.206-1.794 4-4 4H4V8c0-2.206 1.794-4 4-4h8c2.206 0 4 1.794 4 4v7z">
+          </path>
+        </svg>
+        Request
+      </li>
+      <!-- <li [routerLink]="['/users']" [routerLinkActive]="'menu-active'">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="
+            fill: #00cbcb;
+            margin-right: 10px;
+            border: 1px solid #00cbcb;
+            border-radius: 50%;
+            padding: 5px;
+          ">
+          <path
+            d="M7.5 6.5C7.5 8.981 9.519 11 12 11s4.5-2.019 4.5-4.5S14.481 2 12 2 7.5 4.019 7.5 6.5zM20 21h1v-1c0-3.859-3.141-7-7-7h-4c-3.86 0-7 3.141-7 7v1h17z">
+          </path>
+        </svg>
+        User
+      </li>
+      <li [routerLink]="['/settings']" [routerLinkActive]="'menu-active'">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="
+        fill: #00cbcb;
+        margin-right: 10px;
+        border: 1px solid #00cbcb;
+        border-radius: 50%;
+        padding: 5px;
+      ">
+          <path
+            d="m2.344 15.271 2 3.46a1 1 0 0 0 1.366.365l1.396-.806c.58.457 1.221.832 1.895 1.112V21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1.598a8.094 8.094 0 0 0 1.895-1.112l1.396.806c.477.275 1.091.11 1.366-.365l2-3.46a1.004 1.004 0 0 0-.365-1.366l-1.372-.793a7.683 7.683 0 0 0-.002-2.224l1.372-.793c.476-.275.641-.89.365-1.366l-2-3.46a1 1 0 0 0-1.366-.365l-1.396.806A8.034 8.034 0 0 0 15 4.598V3a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v1.598A8.094 8.094 0 0 0 7.105 5.71L5.71 4.904a.999.999 0 0 0-1.366.365l-2 3.46a1.004 1.004 0 0 0 .365 1.366l1.372.793a7.683 7.683 0 0 0 0 2.224l-1.372.793c-.476.275-.641.89-.365 1.366zM12 8c2.206 0 4 1.794 4 4s-1.794 4-4 4-4-1.794-4-4 1.794-4 4-4z">
+          </path>
+        </svg>
+        Settings
+      </li> -->
+    </ul>
+  </div>

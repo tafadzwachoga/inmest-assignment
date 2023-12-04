@@ -1,0 +1,41 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css");
+
+.form-signin {
+    max-width: 420px;
+    padding: 1rem;
+}
+
+.form-signin .form-floating:focus-within {
+    z-index: 2;
+}
+
+.btn {
+    background-color: #17C2A6;
+    color: white;
+    font-weight: 500;
+}
+
+.btn:hover {
+    background-color: #13a088;
+    color: white;
+}
+
+.form-check-input:checked {
+    background-color: #17C2A6;
+}
+
+#textile {
+    background-image: url('/assets/mask.png'), linear-gradient(to top, white 0%, transparent 100%);
+    background-position: center, top;
+    background-repeat: no-repeat, no-repeat;
+    background-size: contain, 100% 50%;
+}
+
+#ovally {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    clip-path: ellipse(60% 20%);
+    background: white;
+}

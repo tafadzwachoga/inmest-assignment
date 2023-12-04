@@ -1,0 +1,119 @@
+@use "@material/button/styles";
+
+
+div.body-head > button.xhead {
+    background-color: #21999d;
+    opacity: .6;
+}
+
+div.body-head > div > button.mdc-fab.mat-mdc-fab.mat-accent.mat-mdc-button-base.mdc-fab--extended.mat-mdc-extended-fab {
+    background-color: white;
+    color: black;
+}
+
+div.body-head > div > button.mdc-fab.mat-mdc-fab.mat-unthemed.mat-mdc-button-base.mdc-fab--extended.mat-mdc-extended-fab {
+    background-color: #21999d;
+}
+
+
+div.requests-wrapper > mat-tab-group > mat-tab-header > div > div > div{
+    background-color: white;
+}
+
+#mat-tab-label-0-0 > span.mdc-tab-indicator > span {
+    border-color: #21999d;
+}
+
+#mat-tab-label-0-0 > span.mdc-tab__content > span {
+    color: black;
+}
+
+#mat-tab-label-0-1 > span.mdc-tab-indicator > span {
+    border-color: #21999d;
+}
+
+#mat-tab-label-0-1 > span.mdc-tab__content > span {
+    color: black;
+}
+
+mat-card, mat-card-content {
+    background-color: white;
+}
+
+mat-card-content table.mat-mdc-table {
+    background-color: white;
+}
+
+// accepted button 
+#mat-tab-content-0-0 > div > mat-card > mat-card-content > table > tbody > tr > td.mat-mdc-cell.mdc-data-table__cell.cdk-cell.button.cdk-column-status.mat-column-status.ng-star-inserted > button.Accepted {
+    background-color: rgb(96, 184, 96);
+}
+
+// pending button 
+#mat-tab-content-0-0 > div > mat-card > mat-card-content > table > tbody > tr > td.mat-mdc-cell.mdc-data-table__cell.cdk-cell.button.cdk-column-status.mat-column-status.ng-star-inserted > button.Pending  {
+    // background-color: rgb(76, 76, 241);
+    background-color: #b39afd;
+}
+
+// sicj leave button 
+#mat-tab-content-0-0 > div > mat-card > mat-card-content > table > tbody > tr > td.mat-mdc-cell.mdc-data-table__cell.cdk-cell.cdk-column-type.mat-column-type.ng-star-inserted > button,
+#mat-tab-content-0-0 > div > mat-card > mat-card-content > table > tbody > tr > td.mat-mdc-cell.mdc-data-table__cell.cdk-cell.cdk-column-type.mat-column-type.ng-star-inserted > button.Sick {
+    border-color: green;
+    background-color: white;
+    color: green;
+    border: 1px solid;
+}
+
+
+#mat-tab-content-0-0 > div > mat-card > mat-card-content > table > tbody > tr > td.mat-mdc-cell.mdc-data-table__cell.cdk-cell.cdk-column-type.mat-column-type.ng-star-inserted > button.Property {
+    border-color: blue;
+    background-color: white;
+    color: blue;
+    border: 1px solid;
+}
+
+div.req-body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 100px;
+}
+
+div.req-body {
+    align-self: flex-start;
+}
+
+div.body-head {
+    // border: 2px solid black;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.requests-wrapper {
+    width: 70vw;
+}
+
+mat-card, table {
+    background-color: white;
+}
+
+
+table td, th{
+    color: black !important;
+    text-align: center;
+}
+
+td.button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+table{
+    overflow-y: scroll;
+}
